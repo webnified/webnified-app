@@ -1,1 +1,1 @@
-secret_key=7d9c4e6e5155d666a34c5375c5cf1635
+secret_key = "7d9c4e6e5155d666a34c5375c5cf1635"
