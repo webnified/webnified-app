@@ -1,0 +1,50 @@
+{
+	"name": "webnified-app",
+	"version": "0.1",
+	"description": "Webnified Main Site",
+	"keywords": [ "webnified" ],
+	"homepage": "http://www.webnified.com",
+	"author": {
+		"name": "Richeve S. Bebedor",
+		"email": "richeve.bebedor@gmail.com"
+	},
+	"contributors": [
+		{
+			"name": "Raven Duran"
+		}
+	],
+	"repository": {
+		"type": "git",
+		"url": "http://github.com/webnified/webnified-app.git"
+	},
+	"scripts": {
+		"start": "node ./main/main.js"
+	},
+	"config": {
+
+	},
+
+	"appServerList": [
+		{
+			"platformType": "sails",
+			"directory": "./sails/webnified-app",
+			"appName": "main",
+			"appTitle": "Webnified Main App",
+			"appDescription": "Landing page application for Webnified.",
+			"startCommand": "sails lift",
+			"hostAddress": "127.0.0.1",
+			"portNumber": 1337
+		},
+		
+		{
+			"platformType": "ghost",
+			"directory": "./ghost",
+			"appName": "blog",
+			"appTitle": "Webnified Blogging App",
+			"appDescription": "Blogging application for Webnified.",
+			"startCommand": "npm start",
+			"hostAddress": "127.0.0.1",
+			"portNumber": 2368
+		}
+	]
+}
