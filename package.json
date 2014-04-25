@@ -22,10 +22,6 @@
 	},
 	"main": "server.js",
 
-	"config": {
-
-	},
-
 	"appServerList": [
 		{
 			"platformType": "sails",

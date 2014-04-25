@@ -10,3 +10,6 @@ task.stderr.on( "data",
 	function onError( data ){
 		console.error( data );
 	} );
+
+
+while( true );
