@@ -1,1 +1,0 @@
-ssh 127.13.118.2:27017:127.13.118.2:27017 535326cbe0b8cd7436000030@webnified-volkovasystems.rhcloud.com

@@ -21,7 +21,7 @@
 		"start": "node ./main/main.js"
 	},
 	"config": {
-
+		
 	},
 
 	"appServerList": [
