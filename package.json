@@ -1,6 +1,6 @@
 {
 	"name": "webnified-app",
-	"version": "0.1",
+	"version": "0.1.0",
 	"description": "Webnified Main Site",
 	"keywords": [ "webnified" ],
 	"homepage": "http://www.webnified.com",
@@ -18,10 +18,10 @@
 		"url": "http://github.com/webnified/webnified-app.git"
 	},
 	"scripts": {
-		"start": "node ./main/main.js"
+		"start": "cd ./sails/webnified-app/ && npm start"
 	},
 	"config": {
-		
+
 	},
 
 	"appServerList": [
