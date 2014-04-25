@@ -1,5 +1,8 @@
 var childprocess = require( "child_process" );
-var task = childprocess.exec( "cd ./sails/webnified-app/ && npm start --prod 1> ../../output.log 2> ../../error.log" );
+var task = childprocess.exec( "cd ./sails/webnified-app/ && npm start --prod 1> ../../output.log 2> ../../error.log",
+	{
+		"env": process.env
+	} );
 
 task.stdout.on( "data",
 	function onData( data ){
