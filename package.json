@@ -18,7 +18,7 @@
 		"url": "http://github.com/webnified/webnified-app.git"
 	},
 	"scripts": {
-		"start": "cd ./sails/webnified-app/ && npm start --prod"
+		"start": "cd ./sails/webnified-app/ && npm start --prod 1> output.log 2> error.log"
 	},
 	"config": {
 
