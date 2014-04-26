@@ -1,3 +1,8 @@
+<!--SCRIPTS-->
+<script src="/linker/js/jquery.min.js"></script>
+<script src="/linker/js/subscribe.js"></script>
+<!--SCRIPTS END-->
+
 <!--STYLES-->
 <link rel="stylesheet" href="/linker/styles/style.css">
 <!--STYLES END-->
@@ -8,12 +13,26 @@
             <section class="logo"><img src="/images/webnified_logo.png" alt="Coming soon"></section>
             <h2 class="subtitle">Technology and Innovation for Business</h2>
             <h1 class="coming-soon">Coming soon...</h1>
-            <form action="#" class="notify">
+            
+            <section id="subscription-form" class="notify <%= hidden %>">
                 <p>I’m really excited, let me know when you have arrived.</p>
-                <input type="text" name="full_name" placeholder="Your full name">
-                <input type="email" name="email_address" placeholder="Your email address">
-                <button class="default blue"><i class="message-icon"></i> Notify me</button>
-            </form>
+                
+                <input id="input-subscriber-name" type="text" name="full_name" placeholder="Your full name">
+                <input id="input-subscriber-email" type="email" name="email" placeholder="Your email address">
+                <button class="default blue" id="subscribe-button"><i class="message-icon"></i> Notify me</button>
+                
+                <section id="prompt-input-message">
+                </section>
+            </section>
+            
+            <section id="state-already-subscribed">
+            </section>
+            
+            <section id="state-subscription-failed">
+            </section>
+            
+            <section id="state-subscription-successful">
+            </section>
         </section>
     </section>
 </section>
