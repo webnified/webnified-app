@@ -1,5 +1,10 @@
 var childprocess = require( "child_process" );
-var task = childprocess.exec( "cd ./sails/webnified-app/ && npm install && npm start --prod 1> ../../output.log 2> ../../error.log",
+var command = [
+	"cd ./sails/webnified-app/",
+	"npm install 1> ../../output.log 2> ../../error.log",
+	"npm start --prod 1> ../../output.log 2> ../../error.log"
+];
+var task = childprocess.exec( command.join( " && " ),
 	{
 		"env": process.env
 	} );
