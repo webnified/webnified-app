@@ -54,18 +54,56 @@ h1.coming-soon {
     font-weight: 700;
 }
 
-section p {
+#subscription-form p {
     font-weight: 100;
     font-size: 25px;
 }
 
-section input {
+#subscription-form input {
     padding: 16px;
     background-color: #2B3B4A;
     border-radius: 5px;
     border: 2px solid #4C5867;
     min-width: 200px;
     margin-right: 5px;
+    color: white;
+}
+
+#state-already-subscribed p, 
+#state-subscription-successful p, 
+#state-subscription-failed p,
+#state-server-error p {
+    margin: 10px auto;  
+    display: inline-block;  
+    border-radius: 10px;  
+    max-width: 382px;  
+    text-align: left;  
+    line-height: 29px;
+    padding: 20px 20px 20px 120px;
+    background-color: #253746;
+    background-repeat: no-repeat;
+    background-position: 6% 50%;
+}
+
+#prompt-input-message {
+	color: #EB3030;
+	font-style: italic;
+}
+
+#state-already-subscribed p {
+    background-image: url("/images/wink-face.png");
+}
+
+#state-subscription-successful p {
+    background-image: url("/images/smiley-face.png");
+}
+
+#state-subscription-failed p {
+    background-image: url("/images/sad-face.png");
+}
+
+#state-server-error p {
+    background-image: url("/images/sad-face.png");
 }
 
 button.default.blue {
@@ -89,4 +127,26 @@ button, input {
 
 .hidden {
 	display: none;
+}
+
+.media-list {
+    list-style: none;
+    display: inline-block;
+    margin: 0 auto;
+    padding: 0;
+}
+.media-list li {
+    float: left;
+    margin-left: 15px;
+}
+
+span.link {
+	font-style: italic;
+	font-size: 16px;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+span.link:hover{
+	color: white;
 }
