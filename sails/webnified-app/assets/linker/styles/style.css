@@ -69,7 +69,10 @@ h1.coming-soon {
     color: white;
 }
 
-#state-already-subscribed p, #state-subscription-successful p, #state-subscription-failed p {
+#state-already-subscribed p, 
+#state-subscription-successful p, 
+#state-subscription-failed p,
+#state-server-error p {
     margin: 10px auto;  
     display: inline-block;  
     border-radius: 10px;  
@@ -96,6 +99,10 @@ h1.coming-soon {
 }
 
 #state-subscription-failed p {
+    background-image: url("/images/sad-face.png");
+}
+
+#state-server-error p {
     background-image: url("/images/sad-face.png");
 }
 
@@ -131,4 +138,15 @@ button, input {
 .media-list li {
     float: left;
     margin-left: 15px;
+}
+
+span.link {
+	font-style: italic;
+	font-size: 16px;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+span.link:hover{
+	color: white;
 }

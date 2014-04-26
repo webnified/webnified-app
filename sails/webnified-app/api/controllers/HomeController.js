@@ -28,9 +28,17 @@ module.exports = {
     var data = { };
     if( req.session.currentlySubscribing ){
       console.log( "Someone already subscribed here." );
-      data.hidden = "hidden";
+      data.subscriptionForm = "hidden";
+      data.stateSubscriptionSuccessful = "hidden";
+      data.stateSubscriptionFailed = "hidden";
+      data.stateAlreadySubscribed = ""
+      data.stateServerError = "hidden";
     }else{
-      data.hidden = "";
+      data.subscriptionForm = "";
+      data.stateSubscriptionSuccessful = "";
+      data.stateSubscriptionFailed = "";
+      data.stateAlreadySubscribed = ""
+      data.stateServerError = "";
     }
 
     return res.view( data );

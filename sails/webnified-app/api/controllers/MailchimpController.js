@@ -66,7 +66,8 @@ var subscribeEngine = function subscribeEngine( req, res, lists ){
 				"status": "error",
 				"data": error,
 				"hasError": true,
-				"subscriptionFailed": true
+				"subscriptionAlreadySent": ( error.name === "List_AlreadySubscribed" ),
+				"subscriptionFailed": ( error.name === "ValidationError" )
 			} );
 		} );
 	}
@@ -80,6 +81,13 @@ module.exports = {
 	subscribe: function subscribe(req, res) {
 		getLists( function callback( lists ){
 			subscribeEngine( req, res, lists );
+		} );
+	},
+
+	newsubscribe: function newsubscribe( req, res ){
+		req.session.currentlySubscribing = false;
+		res.json( {
+			"status": "success"
 		} );
 	},
 
