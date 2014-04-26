@@ -33,6 +33,9 @@ module.exports = {
       data.hidden = "";
     }
 
+    //Remove this.
+    data.hidden = "hidden";
+
     return res.view( data );
   },
 
