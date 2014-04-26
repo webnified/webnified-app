@@ -17,64 +17,70 @@
 
 var mcapi = require( "mailchimp-api" );
 var mc = new mcapi.Mailchimp( "1664690726feb96b5201d9309878b83f-us8" );
-
-var lists;
-mc.lists.list( { },
-	function onList( result ){
-		lists = result.data;
-	} );
+var getLists = function getLists( callback ){
+	mc.lists.list( { },
+		function onList( result ){
+			var lists = result.data;
+			callback( lists );
+		} );
+};
 
 var crypto = require( "crypto" );
+var subscribeEngine = function subscribeEngine( req, res, lists ){
+	var webnifiedID = lists[ 0 ].id;
+
+	var email = req.param( "email" );
+	var name = req.param( "name" );
+
+	var hashEmail = crypto.createHash( "md5" ).update( email, "utf8" ).digest( "hex" );
+	//TODO: Add request if the user has already confirmed.
+
+	if( hashEmail in req.session ){
+		var subscriptionTimestamp = req.session[ hashEmail ];
+		var error = new Error( "subscription for: " + email + " already sent during: " + subscriptionTimestamp );
+		console.error( error );
+		res.json( {
+			"status": "error",
+			"error": error,
+			"subscriptionAlreadySent": true,
+			"hasError": true
+		} );
+	}else{
+		req.session[ hashEmail ] = Date.now( );
+		req.session.currentlySubscribing = true;
+		mc.lists.subscribe( {
+			"id": webnifiedID,
+			"email": {
+				"email": req.param( "email" )
+			},
+			"merge_vars": {
+				"FULLNAME": req.param( "name" )
+			}
+		}, function onSuccess( result ){
+			res.json( {
+				"status": "success",
+				"subscriptionSuccessful": true
+			} );
+		}, function onError( error ){
+			res.json( {
+				"status": "error",
+				"data": error,
+				"hasError": true,
+				"subscriptionFailed": true
+			} );
+		} );
+	}
+};
 
 module.exports = {
 	/**
 	 * Action blueprints:
 	 *    `/mailchimp/subscribe`
 	 */
-	subscribe: function (req, res) {
-		var webnifiedID = lists[ 0 ].id;
-
-		var email = req.param( "email" );
-		var name = req.param( "name" );
-
-		var hashEmail = crypto.createHash( "md5" ).update( email, "utf8" ).digest( "hex" );
-		//TODO: Add request if the user has already confirmed.
-
-		if( hashEmail in req.session ){
-			var subscriptionTimestamp = req.session[ hashEmail ];
-			var error = new Error( "subscription for: " + email + " already sent during: " + subscriptionTimestamp );
-			console.error( error );
-			res.json( {
-				"status": "error",
-				"error": error,
-				"subscriptionAlreadySent": true,
-				"hasError": true
-			} );
-		}else{
-			req.session[ hashEmail ] = Date.now( );
-			req.session.currentlySubscribing = true;
-			mc.lists.subscribe( {
-				"id": webnifiedID,
-				"email": {
-					"email": req.param( "email" )
-				},
-				"merge_vars": {
-					"FULLNAME": req.param( "name" )
-				}
-			}, function onSuccess( result ){
-				res.json( {
-					"status": "success",
-					"subscriptionSuccessful": true
-				} );
-			}, function onError( error ){
-				res.json( {
-					"status": "error",
-					"data": error,
-					"hasError": true,
-					"subscriptionFailed": true
-				} );
-			} );
-		}
+	subscribe: function subscribe(req, res) {
+		getLists( function callback( lists ){
+			subscribeEngine( req, res, lists );
+		} );
 	},
 
 
