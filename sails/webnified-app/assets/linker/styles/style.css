@@ -54,12 +54,12 @@ h1.coming-soon {
     font-weight: 700;
 }
 
-form p {
+section p {
     font-weight: 100;
     font-size: 25px;
 }
 
-form input {
+section input {
     padding: 16px;
     background-color: #2B3B4A;
     border-radius: 5px;
@@ -85,4 +85,8 @@ button, input {
     font-family: Raleway, "Proxima Nova", Helvetica, Arial, sans-serif;
     font-size: 16px;
     outline-color: #67E910;
+}
+
+.hidden {
+	display: none;
 }
