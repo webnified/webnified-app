@@ -104,18 +104,21 @@
 
 		socket.on( "error",
 			function onError( ){
+				console.debug( "Error: ", arguments );
 				hideAllComponents( );
-				stateServerError.removeClass( "hidden" );
+				//stateServerError.removeClass( "hidden" );
 			} );
 
 		socket.on( "connect_failed",
 			function onFailedConnect( ){
+				console.debug( "Connect failed: ", arguments );
 				hideAllComponents( );
 				stateServerError.removeClass( "hidden" );
 			} );
 
 		socket.on( "reconnect_failed",
 			function onFailedConnect( ){
+				console.debug( "Reconnect failed: ", arguments );
 				hideAllComponents( );
 				stateServerError.removeClass( "hidden" );
 			} );

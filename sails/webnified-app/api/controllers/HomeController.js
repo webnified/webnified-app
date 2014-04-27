@@ -41,6 +41,9 @@ module.exports = {
       data.stateServerError = "";
     }
 
+    //Remove this.
+    data.hidden = "hidden";
+
     return res.view( data );
   },
 
