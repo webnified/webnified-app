@@ -105,7 +105,7 @@
 		socket.on( "error",
 			function onError( ){
 				console.debug( "Error: ", arguments );
-				hideAllComponents( );
+				//hideAllComponents( );
 				//stateServerError.removeClass( "hidden" );
 			} );
 
