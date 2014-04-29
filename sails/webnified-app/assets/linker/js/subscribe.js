@@ -4,6 +4,7 @@
 		var nameInput = $( "#input-subscriber-name" );
 		var emailInput = $( "#input-subscriber-email" );
 		var promptContainer = $( "#prompt-input-message" );
+		var promptMessage = promptContainer.find( "#prompt-message" );
 		
 		var subscriptionForm = $( "#subscription-form" );
 		var stateSubscriptionSuccessful = $( "#state-subscription-successful" );
@@ -42,11 +43,12 @@
 				} );
 		} );
 
+		var emailPattern = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+
 		$( "#subscribe-button" ).click( function onClick( ){
 			var name = nameInput.val( );
 			var email = emailInput.val( );	
 
-			var promptMessage = promptContainer.find( "#prompt-message" );
 			if( !( name && email ) ){
 				promptContainer.removeClass( "hidden" );
 				console.log( "Incomplete data." );
@@ -60,11 +62,18 @@
 			}
 
 			//Regex tester for email address here.
-			if( !email ){
+
+			if( !emailPattern.test( email ) ){
 				console.log( "Invalid email address." );
+				promptContainer.removeClass( "hidden" );
+				promptMessage.text( "We found out that your email address is not right." );
 				return;
 			}
 
+
+			subscriptionForm.children( ).prop( "disabled", true );
+			promptContainer.removeClass( "hidden" );
+			promptMessage.text( "Please wait, while we're subscribing you." );
 			socket.get( "/mailchimp/subscribe", {
 				"name": name,
 				"email": email
@@ -90,13 +99,16 @@
 
 				if( response.hasError ){
 					if( response.subscriptionAlreadySent ){
+						subscriptionForm.children( ).prop( "disabled", false );
 						subscriptionForm.addClass( "hidden" );
 						stateAlreadySubscribed.removeClass( "hidden" );
 					}else if( response.subscriptionFailed ){
+						subscriptionForm.children( ).prop( "disabled", false );
 						stateSubscriptionFailed.removeClass( "hidden" );
 					}
 				}else if( response.subscriptionSuccessful ){
-					subscriptionForm.hide( );
+					subscriptionForm.children( ).prop( "disabled", false );
+					subscriptionForm.addClass( "hidden" );
 					stateSubscriptionSuccessful.removeClass( "hidden" );
 				}
 			} );
