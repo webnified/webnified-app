@@ -74,6 +74,8 @@ var childprocess = require( "child_process" );
 var command = [
 	"cd ./sails/webnified-app/",
 	"npm install",
+	"npm update",
+	"npm-install-missing",
 	"npm start"
 ];
 var task = childprocess.exec( command.join( " && " ),
@@ -91,5 +93,14 @@ task.stderr.on( "data",
 		console.error( data );
 	} );
 
+/*var io = require( "socket.io" );
+io.listen(  );
+
+io.sockets.on( "connection", function (socket) {
+	socket.emit('news', { hello: 'world' });
+	socket.on('my other event', function (data) {
+    console.log(data);
+	});
+});*/
 
 //while( true );
