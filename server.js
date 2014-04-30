@@ -8,6 +8,7 @@ if( fs.existsSync( "./local.json" ) ){
 }
 
 //Set the logging namespace
+var os = require( "os" );
 var localNamespace;
 if( "OPENSHIFT_APP_UUID" in process.env
 	&& process.env.OPENSHIFT_APP_UUID === "535326cbe0b8cd7436000030" )
