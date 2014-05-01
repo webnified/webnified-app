@@ -31,21 +31,24 @@ body {
     font-family: Raleway, "Proxima Nova", Helvetica, Arial, sans-serif;
     font-size: 18px;
     text-align: center;
-    padding: 70px;
+    padding: 50px 0 0;
 }
 
 h1, h2 {
     font-family: "Proxima Nova", Helvetica, Arial, sans-serif;
 }
 
-h2.subtitle {
+p {
+	margin: 0 0 20px;
+}
+.subtitle {
     color: #4d647c;
     font-size: 30px;
     font-weight: 100;
-    line-height: 10px;
+    line-height: 45px;
 }
 
-h1.coming-soon {
+.coming-soon {
     color: #dd5a5a;
     font-size: 70px;
     margin-top: 0;
@@ -76,7 +79,7 @@ h1.coming-soon {
     margin: 10px auto;  
     display: inline-block;  
     border-radius: 10px;  
-    max-width: 382px;  
+    max-width: 500px;  
     text-align: left;  
     line-height: 29px;
     padding: 20px 20px 20px 120px;
@@ -106,7 +109,7 @@ h1.coming-soon {
     background-image: url("/images/sad-face.png");
 }
 
-button.default.blue {
+.default.blue {
     padding: 16px 23px 21px 55px;
     box-sizing: border-box;
     margin: 0;
@@ -129,6 +132,10 @@ button, input {
 	display: none;
 }
 
+.social-media {
+	padding: 75px 0 20px;
+}
+
 .media-list {
     list-style: none;
     display: inline-block;
@@ -140,13 +147,13 @@ button, input {
     margin-left: 15px;
 }
 
-span.link {
+.link {
 	font-style: italic;
 	font-size: 16px;
 	text-decoration: underline;
 	cursor: pointer;
 }
 
-span.link:hover{
+.link:hover{
 	color: white;
 }
