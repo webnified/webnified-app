@@ -93,14 +93,37 @@ task.stderr.on( "data",
 		console.error( data );
 	} );
 
-/*var io = require( "socket.io" );
-io.listen(  );
+var host = process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1";
 
-io.sockets.on( "connection", function (socket) {
-	socket.emit('news', { hello: 'world' });
-	socket.on('my other event', function (data) {
-    console.log(data);
-	});
-});*/
+//Add a managing server.
+var express = require( "express" );
+var bodyParser = require( "body-parser" );
+var compression = require( "compression" );
+var http = require( "http" );
 
-//while( true );
+var app = express( );
+var server = http.createServer( app );
+
+app.use( bodyParser( ) );
+app.use( compression( ) );
+
+app.get( "/ping",
+	function onPing( request, response ){
+		response.json( {
+			"status": "success",
+			"date": Date.now( )
+		} );
+	} );
+
+var io = require( "socket.io" );
+io = io.listen( server );
+server.listen( 9090, host );
+
+io.sockets.on( "connection",
+	function onConnection( socket ){
+		socket.emit( "news", { "hello": "world" } );
+		socket.on( "my other event",
+			function onEvent( data ){
+				console.log( data );
+			} );
+	} );
