@@ -75,7 +75,6 @@ var command = [
 	"cd ./sails/webnified-app/",
 	"npm install",
 	"npm update",
-	"npm-install-missing",
 	"npm start"
 ];
 var task = childprocess.exec( command.join( " && " ),
