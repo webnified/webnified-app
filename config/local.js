@@ -21,7 +21,7 @@
  * For more information, check out:
  * http://sailsjs.org/#documentation
  */
- 
+
 module.exports = {
 
 
@@ -36,9 +36,9 @@ module.exports = {
   // In production, you'll probably want to change this setting 
   // to 80 (http://) or 443 (https://) if you have an SSL certificate
 
-  port: process.env.OPENSHIFT_NODEJS_PORT || process.env.PORT || 1337,
+  port: process.env.PORT || 1337,
 
-  host: process.env.OPENSHIFT_NODEJS_IP || process.env.HOST || "127.0.0.1",
+
 
   // The runtime "environment" of your Sails app is either 'development' or 'production'.
   //
