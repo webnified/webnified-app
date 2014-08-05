@@ -1,0 +1,339 @@
+@import url('font/font.css');
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  font-weight: lighter;
+  line-height: 32px;
+}
+
+/* Buttons */
+.btn {
+  font-size: 1em;
+  font-weight: bold;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 10px 50px;
+  
+}
+
+/* Navbar */
+.navbar a#sTop {
+    font-family: "Mikado Bold";
+    color: #94B9D1;
+    font-size: 32px;
+    line-height: 1.4em;
+}
+
+.navbar-default .navbar-collapse, 
+.navbar-default .navbar-form {
+  border-color: #CFCFCF;
+  padding: 10px 5px;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: #ACACAC;
+  font-weight: bold;
+}
+
+/* Lead */
+.lead {
+  background-color: #081F35;
+  background-image: url(img/earth.png);
+  background-repeat: no-repeat;
+  background-position: 50% 185%;
+  color: white;
+  padding: 100px 0 250px;
+  margin-bottom: 0;
+}
+.lead #logo img {
+  display: block;
+  margin: 60px auto;
+  width: 250px;
+  
+}
+.lead .heading {
+  font-size: 80px;
+}
+.lead .copy {
+  font-size: 1.4em;
+  text-align: center;
+  max-width: 1024px;
+  margin: 35px auto;
+}
+.lead .call-to-action {
+  padding-top: 50px;
+  text-align: center;
+}
+.lead .btn {
+  color: #111111;
+}
+.lead .btn.business {
+  background-color: #C9D158;
+}
+
+
+.lead .btn.startup {
+  background-color: rgb(255, 240, 107);
+}
+
+/* Process */
+.our-process {
+  padding: 100px 0;
+}
+.our-process .content {
+    margin: 100px;
+}
+.process-img {
+    width: 100%;
+    border-radius: 50%;
+}
+.process .heading {
+    text-align: left;
+    padding: 0 0 20px;
+    margin-bottom: 20px;
+}
+.process {
+    padding: 50px 0;
+}
+
+@media (max-width: 991px) {
+  .process .heading,
+  .process .desc {
+    text-align: center;
+  }
+}
+
+/* Projects */
+.projects {
+    background-color: #081F35;
+    color: white;
+    padding: 100px 0;
+}
+
+/* Slider */
+ .slider {
+  background-image: url(img/slider/frame.png);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  height: 600px;
+  margin: 100px auto;
+  overflow: hidden;
+  position: relative;
+  width: 1000px;
+}
+.slider. ul {
+  position:relative;
+}
+.slider li {
+  display: block;
+  width: 720px;
+  height: 485px;
+  margin: 50px 100px;
+  position: absolute;
+  overflow: hidden;
+  border-radius: 30px;
+}
+.slider .controls a {
+  position: absolute;
+  cursor: pointer;
+  z-index: 5;
+}
+.slider .controls .prev-btn {
+  top: 270px;
+  left: 110px;
+}
+.slider .controls .next-btn {
+  top: 270px;
+  right: 110px;
+}
+.hide {
+  display: none;
+}
+
+/* Profile */
+.profile {
+  position: absolute;
+  top: -85px;
+  display: none;
+}
+.hero {
+  position: relative;
+  text-align: center;
+}
+.hero a:hover .profile {
+  display: block
+}
+.profile .name, .profile .position {
+  display: block;
+  text-align: center;
+}
+.profile .name {
+  font-size: 32px;
+}
+.profile .position {
+  font-size: 16px;
+}
+.hero.kevin .profile {
+  top: -80px;
+  left: 28%;
+}
+.hero.edsil .profile {
+  top: -80px;
+  left: 26%;
+}
+.hero.geoff .profile {
+  left: 17%;
+}
+.hero.raven .profile {
+  left: 35%;
+}
+.hero.logi .profile {
+  left: 16%;
+}
+.hero.juls .profile {
+  left: 24%;
+}
+.hero.chiv .profile {
+  left: 25%;
+}
+.hero.dimful .profile {
+  left: 29%;
+}
+
+/* Team */
+.team {
+  padding: 100px 0;
+}
+.team .hero {
+  display: inline-block;
+  vertical-align: bottom;
+}
+.team .hero:not(:first-child) {
+  margin-left: -95px;
+}
+.team .heroes {
+  width: 1250px;
+  margin: 100px auto;
+  padding: 0;
+}
+.team .hero img {
+  width: 65%
+}
+
+/* Contact */
+.contact {
+  background-color: #081F35;
+  padding: 100px 0;
+  color: white;
+}
+.contact .form-heading h3 {
+  text-align: center;  margin-top: 0;
+}
+.contact-form .form-labels {
+  padding: 0;
+}
+.contact-form .form-labels li {
+  list-style: none;
+}
+.contact-form.col-lg-12 {
+  padding: 50px 0;
+}
+.contact-form textarea {
+  padding: 20px;
+  height: 235px;
+}
+.contact-form .form-input input, 
+.contact-form select, 
+.contact-form textarea {
+  border-radius: 5px;
+  padding: 5px 10px;
+  width: 100%;
+  border: 1px solid #807B7B;
+  margin-bottom: 23px;
+  background: #081B2E;
+}
+.contact-form label {
+  padding: 6px;
+  text-align: right;
+}
+.contact-form button.btn {
+  margin-right: 0;
+  margin-left: 0;
+  background-color: #30B4EB;
+}
+.contact-form > .col-lg-6 {
+  padding: 0;
+}
+
+/* Typography */
+.header p {
+  text-align: center;
+}
+.heading {
+  font-family: "Mikado Bold";
+  text-align: center;
+}
+.heading .normal {
+  font-style: normal;
+  font-family: "MikadoLight";
+}
+h2.heading {
+  font-size: 4em;
+}
+
+h3.heading {
+  font-size: 2.6em;
+}
+
+
+/* Animations */
+@-webkit-keyframes animatelogo {
+  0%,100% {
+        transform: translateY(0px);
+        -webkit-transform: translateY(0px); 
+    }
+  50% {
+        transform: translateY(20px);
+        -webkit-transform: translateY(20px); 
+    }
+}
+@-moz-keyframes animatelogo {
+  0%,100% {
+        transform: translateY(0px);
+        -webkit-transform: translateY(0px); 
+    }
+  50% {
+        transform: translateY(20px);
+        -webkit-transform: translateY(20px); 
+    }
+}
+@-o-keyframes animatelogo {
+  0%,100% {
+        transform: translateY(0px);
+        -webkit-transform: translateY(0px); 
+    }
+  50% {
+        transform: translateY(20px);
+        -webkit-transform: translateY(20px); 
+    }
+}
+@keyframes animatelogo {
+  0%,100% {
+        transform: translateY(0px);
+        -webkit-transform: translateY(0px); 
+    }
+  50% {
+        transform: translateY(20px);
+        -webkit-transform: translateY(20px); 
+    }
+}
+
+#logo {
+    display: block;
+
+    -webkit-animation: animatelogo 2s infinite; /* Safari 4+ */
+      -moz-animation:    animatelogo 2s infinite; /* Fx 5+ */
+      -o-animation:      animatelogo 2s infinite; /* Opera 12+ */
+      animation:         animatelogo 2s infinite; /* IE 10+ */
+}
