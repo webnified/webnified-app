@@ -19,12 +19,15 @@ body {
 
 /* Navbar */
 .navbar a#sTop {
-    font-family: "Mikado Bold";
-    color: #94B9D1;
-    font-size: 32px;
-    line-height: 1.4em;
+  font-family: "Mikado";
+  color: #94B9D1;
+  font-size: 32px;
+  line-height: 1.4em;
 }
-
+.navbar a#s5 {
+  background-color: #C9D158;
+  color: #111;
+}
 .navbar-default .navbar-collapse, 
 .navbar-default .navbar-form {
   border-color: #CFCFCF;
@@ -271,12 +274,13 @@ body {
   text-align: center;
 }
 .heading {
-  font-family: "Mikado Bold";
+  font-family: "Mikado";
   text-align: center;
 }
 .heading .normal {
   font-style: normal;
-  font-family: "MikadoLight";
+  font-family: "Mikado";
+  font-weight: lighter;
 }
 h2.heading {
   font-size: 4em;
