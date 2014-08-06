@@ -1,7 +1,7 @@
 @import url('font/font.css');
 
-body {
-  font-family: "Raleway", sans-serif;
+body { 
+  font-family: Raleway, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 18px;
   font-weight: lighter;
   line-height: 32px;
@@ -19,7 +19,7 @@ body {
 
 /* Navbar */
 .navbar a#sTop {
-  font-family: "Mikado";
+  font-family: Mikado, Gotham, sans-serif;
   color: #94B9D1;
   font-size: 32px;
   line-height: 1.4em;
@@ -274,13 +274,13 @@ body {
   text-align: center;
 }
 .heading {
-  font-family: "Mikado";
+  font-family: 'Mikado Bold', Gotham, sans-serif;
   text-align: center;
 }
 .heading .normal {
   font-style: normal;
-  font-family: "Mikado";
   font-weight: lighter;
+  font-family: 'Mikado Light', 'Clear Sans' ,'Helvetica Neue', Helvetica, sans-serif;
 }
 h2.heading {
   font-size: 4em;
