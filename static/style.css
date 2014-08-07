@@ -382,7 +382,7 @@ body {
 /* Profile */
 .profile {
   position: absolute;
-  top: -85px;
+  top: -118px;
   display: none;
 }
 .hero {
@@ -412,21 +412,26 @@ body {
 }
 .hero.geoff .profile {
   left: 17%;
+  top: -118px;
 }
 .hero.raven .profile {
-  left: 35%;
+  left: 30%;
+  top: -81px;
 }
 .hero.logi .profile {
-  left: 16%;
+  left: 14%;
+  top: -76px;
 }
 .hero.juls .profile {
   left: 24%;
+  top: -75px;
 }
 .hero.chiv .profile {
   left: 25%;
 }
 .hero.dimful .profile {
   left: 29%;
+  top: -70px;
 }
 
 /* Team */
@@ -439,15 +444,18 @@ body {
   vertical-align: bottom;
 }
 .team .hero:not(:first-child) {
-  margin-left: -95px;
+  margin-left: -74px;
 }
 .team .heroes {
-  width: 1250px;
-  margin: 100px auto;
+  margin: 100px 0;
   padding: 0;
 }
 .team .hero img {
-  width: 65%
+  width: 100%;
+}
+.heroes .hero.kevin, 
+.heroes .hero.raven {
+    z-index: 3;
 }
 
 /* Contact */
@@ -483,16 +491,22 @@ body {
   background: #081B2E;
 }
 .contact-form label {
-  padding: 6px;
   text-align: right;
 }
-.contact-form button.btn {
+.contact-form .btn {
   margin-right: 0;
   margin-left: 0;
   background-color: #30B4EB;
 }
 .contact-form > .col-lg-6 {
   padding: 0;
+}
+
+@media (max-width: 767px) {
+  .contact-form .btn {
+    width: 100%;
+    padding: 20px;
+  }  
 }
 
 /* Typography */
