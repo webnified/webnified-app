@@ -83,6 +83,7 @@ body {
 /* Process */
 .our-process {
   padding: 100px 0;
+  background-color: white;
 }
 .our-process .content {
     margin: 100px;
@@ -207,6 +208,7 @@ body {
 /* Team */
 .team {
   padding: 100px 0;
+  background-color: white;
 }
 .team .hero {
   display: inline-block;
