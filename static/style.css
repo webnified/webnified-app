@@ -196,7 +196,6 @@ body {
   90% {transform:translate(6.1803px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
   100% {transform:translate(0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
 }
-
 #cloud2 {
   top: 86px;
   left: 437px;
