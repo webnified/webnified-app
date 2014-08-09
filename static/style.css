@@ -349,43 +349,10 @@ body {
 }
 
 /* Slider */
- .slider {
-  background-image: url(img/slider/frame.png);
-  background-repeat: no-repeat;
-  background-position: 50%;
-  height: 600px;
-  margin: 100px auto;
-  overflow: hidden;
-  position: relative;
-  width: 1000px;
-}
-.slider. ul {
-  position:relative;
-}
-.slider li {
-  display: block;
-  width: 720px;
-  height: 485px;
-  margin: 50px 100px;
-  position: absolute;
-  overflow: hidden;
-  border-radius: 30px;
-}
-.slider .controls a {
-  position: absolute;
-  cursor: pointer;
-  z-index: 5;
-}
-.slider .controls .prev-btn {
-  top: 270px;
-  left: 110px;
-}
-.slider .controls .next-btn {
-  top: 270px;
-  right: 110px;
-}
-.hide {
-  display: none;
+#project-slider .item img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 /* Profile */

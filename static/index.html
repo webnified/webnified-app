@@ -10,6 +10,10 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="lib/wow/animate.css">
     <link rel="stylesheet" href="style.css">
+    <!-- Important Owl stylesheet -->
+    <link rel="stylesheet" href="lib/owl-carousel/owl.carousel.css">
+    <!-- Default Theme -->
+    <link rel="stylesheet" href="lib/owl-carousel/owl.theme.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -275,28 +279,13 @@
         <h2 class="heading">Our Projects</h2>
         <p class="wow fadeInDown">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore similique nostrum iure voluptatibus rerum, dolores dolorum exercitationem totam corporis consequuntur inventore asperiores laudantium dolorem iste nemo praesentium odit illum! At.</p>
       </section>
-      <section class="slider wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">
-        <section class="controls">  
-          <a class="next-btn"><img src="img/slider/next-btn.png"></a>
-        <a class="prev-btn"><img src="img/slider/prev-btn.png"></a>
-        </section>
-        <section class="image-container">
-            <ul>
-                <li>
-                    <img src="http://www.tudonna.it/wp-content/plugins/vslider/timthumb.php?src=%2Fwp-content%2Fuploads%2F2013%2F05%2Fariana-grande-fiori1.jpg&w=720&h=500&zc=1&q=100" class="images" alt="Slider 1">
-                </li>
-                <li>
-                    <img src="http://www.tudonna.it/wp-content/plugins/vslider/timthumb.php?src=%2Fwp-content%2Fuploads%2F2013%2F10%2Fkaty-perry-americana-glendale-launch-celebutopia-CD012021719.jpg&w=720&h=500&zc=1&q=80" class="images hide" alt="Slider 2">
-                </li>
-                <li>
-                    <img src="http://www.tudonna.it/wp-content/plugins/vslider/timthumb.php?src=%2Fwp-content%2Fuploads%2F2013%2F04%2F5.jpg&w=720&h=500&zc=1&q=100" class="images hide" alt="Slider 3">
-                </li>
-                <li>
-                    <img src="http://www.tudonna.it/wp-content/plugins/vslider/timthumb.php?src=%2Fwp-content%2Fuploads%2F2013%2F05%2Fkaty_perry_red_lips_pink_hair.jpg&w=720&h=500&zc=1&q=100" class="images hide" alt="Slider 4">
-                </li>
-            </ul>
-        </section>
-    </section>
+      <div id="project-slider" class="owl-carousel owl-theme">
+       
+        <div class="item"><img src="img/slider/fullimage1.jpg" alt="The Last of us"></div>
+        <div class="item"><img src="img/slider/fullimage2.jpg" alt="GTA V"></div>
+        <div class="item"><img src="img/slider/fullimage3.jpg" alt="Mirror Edge"></div>
+       
+      </div>
     </section>
     </section>
     <!-- projects section #end -->
@@ -443,10 +432,28 @@
     
     <!-- Include all compiled plugins (below), or include insectionidual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/slider.js"></script>
     <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/owl-carousel/owl.carousel.js"></script>
     <script>
         new WOW().init();
+
+        $(document).ready(function() {
+          $("#project-slider").owlCarousel({
+         
+              navigation : true, // Show next and prev buttons
+              slideSpeed : 300,
+              paginationSpeed : 400,
+              singleItem:true
+         
+              // "singleItem:true" is a shortcut for:
+              // items : 1, 
+              // itemsDesktop : false,
+              // itemsDesktopSmall : false,
+              // itemsTablet: false,
+              // itemsMobile : false
+         
+          });
+        });
     </script>
   </body>
 </html>
