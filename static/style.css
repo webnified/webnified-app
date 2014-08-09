@@ -302,6 +302,16 @@ body {
   90% {transform:translate(6.1803px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
   100% {transform:translate(0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
 }
+/* What we do */
+.what-we-do {
+    padding-top: 50px;
+}
+.what-we-do .content h1 {
+    font-family: 'Mikado Bold', Gotham, sans-serif;
+}
+.what-we-do .content .row {
+    padding-top: 100px;
+}
 
 /* Process */
 .our-process {
@@ -522,7 +532,7 @@ body {
   font-family: 'Mikado Light', 'Clear Sans' ,'Helvetica Neue', Helvetica, sans-serif;
 }
 h2.heading {
-  font-size: 4em;
+  font-size: 2.7em;
 }
 
 h3.heading {
