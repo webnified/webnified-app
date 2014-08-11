@@ -306,14 +306,18 @@ body {
 }
 /* What we do */
 .what-we-do {
-    padding-top: 50px;
+  padding-top: 50px;
+  text-align: center;
+}
+.what-we-do .header {
+  padding-bottom: 80px;
 }
 .what-we-do .content h1 {
-    font-family: 'Mikado Bold', Gotham, sans-serif;
+  font-family: 'Mikado Bold', Gotham, sans-serif;
 }
-.what-we-do .content .row {
-    padding-top: 100px;
-}
+.what-we-do img {
+  width: 250px;
+} 
 
 /* Process */
 .our-process {
