@@ -28,8 +28,10 @@ body {
   line-height: 1.4em;
 }
 .navbar a#s5 {
+}
+.assign-color{
   background-color: #C9D158;
-  color: #111;
+  color: #111 !important;
 }
 .navbar-default .navbar-collapse, 
 .navbar-default .navbar-form {
