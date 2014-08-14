@@ -359,6 +359,9 @@ body {
     color: white;
     padding: 100px 0;
 }
+.projects .modal {
+    color: #333;
+}
 
 /* Slider */
 #project-slider .item img {
@@ -498,6 +501,9 @@ body {
 }
 
 /* Typography */
+a:focus {
+  outline: none;
+}
 .header p {
   text-align: center;
 }
