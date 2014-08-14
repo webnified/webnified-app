@@ -7,7 +7,7 @@ $(".navbar").waypoint(function (direction){
 	if(direction == "up"){
 		$(this).removeClass("navbar-fixed-top");
 	}
-}, { offset: 0 });
+}, { offset: 20 });
 /*what we do Waypoint*/
 waypoints("#what-we-do" , "#s1");
 /*pocess Waypoint*/
@@ -19,10 +19,17 @@ waypoints("#team" , "#s4");
 /*contact Waypoint*/
 waypoints("#contact" , "#s5");
 
-$(".smintlink").click(function ( event ){
+$(".smintlink ").click(function ( event ){
 	event.preventDefault();
 	var id = event.target.href.match(/(\#.+)$/)[1];	
-	$(id).animatescroll();
+	if(!$("#navigate").hasClass("navbar-fixed-top")){
+		$(".navbar").animatescroll();
+		setTimeout(function (){
+			$(id).animatescroll();
+		} , 700);
+	}else{
+		$(id).animatescroll();	
+	}
 });
 
 function waypoints( div , link ){
