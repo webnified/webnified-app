@@ -575,3 +575,37 @@ h3.heading {
       -o-animation:      animatelogo 2s infinite; /* Opera 12+ */
       animation:         animatelogo 2s infinite; /* IE 10+ */
 }
+
+/* 480px Mobile Breakpoint */
+@media (max-width: 480px) {
+  .earth {
+    left: -37%;
+  }
+  #cloud1 {
+    top: 50px;
+    left: 327px;
+    width: 110px;
+  }
+  #cloud2 {
+    top: 50px;
+    left: 87px;
+    width: 90px;
+  }
+  .navbar-brand {
+    font-size: 22px;    
+    padding: 10px;
+      
+  }
+  .navbar-nav {
+    padding: 0;
+  }
+  
+  .navbar-nav .smintlink {
+    text-align: center;
+  }
+  .our-process .content {
+    margin: 20px;
+  }
+}
+
+/* 760px Mobile Breakpoint */
