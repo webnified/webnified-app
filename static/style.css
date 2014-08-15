@@ -21,7 +21,9 @@ body {
 .navbar {
   margin-bottom: 0;
 }
-.navbar a#sTop {
+
+.navbar>.container .navbar-brand, 
+.navbar>.container-fluid .navbar-brand {
   font-family: 'Mikado Bold', Gotham, sans-serif;
   color: #94B9D1;
   font-size: 32px;
@@ -576,6 +578,27 @@ h3.heading {
       animation:         animatelogo 2s infinite; /* IE 10+ */
 }
 
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 4px solid #eee;
+  border-radius: 10px;
+  margin: 20px 20px;
+}
+
+hr:after {
+  display: inline-block;  width: 50px;  height: 50px;  
+  background: #eee url('img/rocket-ships-separator.png') no-repeat 51% 44%;  
+  background-size: 40%;  
+  left: 50%;  
+  content: " ";  
+  position: relative;  
+  top: -25px;
+  transform: rotate(30deg);
+  border-radius: 50%;
+}
+
 /* 480px Mobile Breakpoint */
 @media (max-width: 480px) {
   .earth {
@@ -610,21 +633,54 @@ h3.heading {
 
 /* 760px Mobile Breakpoint */
 @media (max-width: 760px) and (min-width: 481px) {
-    #cloud1 {
-        left: 507px;
-        width: 100px;
-    }
-    .earth {
-        top: 109%;
-        left: 5%;
-    }
-    #cloud2 {
-        top: 51px;
-        left: 252px;
-        width: 120px;
-    }
-    .navbar .navbar-brand {
-        font-size: 22px;
-        padding: 10px 20px;
-    }
+  #cloud1 {
+    left: 507px;
+    width: 100px;
+  }
+  .earth {
+    top: 109%;
+    left: 5%;
+  }
+  #cloud2 {
+    top: 51px;
+    left: 252px;
+    width: 120px;
+  }
+  .navbar .navbar-brand {
+    font-size: 22px;
+    padding: 10px 20px;
+  }
+}
+
+/* 960px Mobile Breakpoint */
+@media (max-width: 960px) and (min-width: 761px) {
+  .navbar-default .navbar-nav>li>a {
+    font-size: 15px;  
+    padding: 10px 8px;
+  }
+  .navbar>.container .navbar-brand, 
+  .navbar>.container-fluid .navbar-brand {
+    font-size: 28px;
+    padding: 12px;
+  }
+  .earth {
+    top: 110%;
+    left: 5%;
+  }
+  #cloud1 {
+    top: 30px;
+    left: 507px;
+    width: 120px;
+  }
+  #cloud2 {
+    top: 56px;
+    left: 236px;
+    width: 100px;
+  }
+  .what-we-do .header {
+    padding-bottom: 30px;
+  }
+  .what-we-do .content .col-lg-4 {
+    padding-bottom: 40px;
+  }
 }
