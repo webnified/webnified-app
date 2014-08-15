@@ -609,3 +609,22 @@ h3.heading {
 }
 
 /* 760px Mobile Breakpoint */
+@media (max-width: 760px) and (min-width: 481px) {
+    #cloud1 {
+        left: 507px;
+        width: 100px;
+    }
+    .earth {
+        top: 109%;
+        left: 5%;
+    }
+    #cloud2 {
+        top: 51px;
+        left: 252px;
+        width: 120px;
+    }
+    .navbar .navbar-brand {
+        font-size: 22px;
+        padding: 10px 20px;
+    }
+}
