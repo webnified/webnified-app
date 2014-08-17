@@ -711,7 +711,9 @@ hr:after {
   .navbar-nav .smintlink {
     text-align: center;
   }
-
+  .profile {
+    display: block;
+  }
 }
 
 /* max: 1199px Mobile Breakpoint */
