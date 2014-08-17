@@ -390,40 +390,40 @@ body {
   text-align: center;
 }
 .profile .name {
-  font-size: 32px;
+  font-size: 26px;
 }
 .profile .position {
-  font-size: 16px;
+  font-size: 13px;
 }
 .hero.kevin .profile {
-  top: -80px;
-  left: 28%;
+  top: -60px;
+  left: 19%;
 }
 .hero.edsil .profile {
-  top: -80px;
-  left: 26%;
+  top: -84px;
+  left: 13%;
 }
 .hero.geoff .profile {
-  left: 17%;
-  top: -118px;
+  left: 13%;
+  top: -84px;
 }
 .hero.raven .profile {
-  left: 30%;
+  left: 24%;
   top: -81px;
 }
 .hero.logi .profile {
-  left: 14%;
-  top: -76px;
+  left: 10%;
+  top: -78px;
 }
 .hero.juls .profile {
-  left: 24%;
+  left: 21%;
   top: -75px;
 }
 .hero.chiv .profile {
   left: 25%;
 }
 .hero.dimful .profile {
-  left: 29%;
+  left: 20%;
   top: -70px;
 }
 
@@ -437,7 +437,7 @@ body {
   vertical-align: bottom;
 }
 .team .hero:not(:first-child) {
-  margin-left: -74px;
+  margin-left: -37px;
 }
 .team .heroes {
   margin: 100px 0;
@@ -446,9 +446,17 @@ body {
 .team .hero img {
   width: 100%;
 }
-.heroes .hero.kevin, 
-.heroes .hero.raven {
-    z-index: 3;
+.team .heroes .hero.kevin, 
+.team .heroes .hero.raven {
+  z-index: 3;
+}
+.team .hero.papot .profile {
+  left: 23%;  
+  top: -75px;
+}
+.team .hero.gerber .profile {
+  left: 14%;  
+  top: -83px;
 }
 
 /* Contact */
