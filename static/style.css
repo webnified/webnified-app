@@ -707,4 +707,30 @@ hr:after {
   .navbar-nav .smintlink {
     text-align: center;
   }
+  .navbar-nav {
+    margin: 0;
+  }
 }
+
+/* max: 1199px Mobile Breakpoint */
+@media (max-width: 1199px) {
+  .team .heroes {
+    text-align: center;
+  }
+  .team .hero {
+    margin-top: 20px;
+    margin-bottom: 60px;
+    margin-left: 0 !important;
+  }
+  .team .hero a {
+    text-decoration: none;
+  }
+  .profile {
+    position: absolute;
+    left: 0 !important;
+    top: -40px !important;
+    width: 250px;
+    text-align: center;
+  } 
+}
+
