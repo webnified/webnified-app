@@ -503,13 +503,6 @@ body {
   padding: 0;
 }
 
-@media (max-width: 767px) {
-  .contact-form .btn {
-    width: 100%;
-    padding: 20px;
-  }  
-}
-
 /* Typography */
 a:focus {
   outline: none;
@@ -631,9 +624,6 @@ hr:after {
     padding: 0;
   }
   
-  .navbar-nav .smintlink {
-    text-align: center;
-  }
   .our-process .content {
     margin: 20px;
   }
@@ -690,5 +680,31 @@ hr:after {
   }
   .what-we-do .content .col-lg-4 {
     padding-bottom: 40px;
+  }
+}
+
+
+/* 991px Mobile Breakpoint */
+@media (max-width: 991px) {
+  .navbar-default .navbar-nav>li>a {
+    font-size: 15px;  
+    padding: 10px 8px;
+  }
+  .navbar>.container .navbar-brand, 
+  .navbar>.container-fluid .navbar-brand {
+    font-size: 28px;
+    padding: 12px;
+  }
+  .contact-form .btn {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+
+/* 767px Mobile Breakpoint */
+@media (max-width: 767px) {
+  .navbar-nav .smintlink {
+    text-align: center;
   }
 }
