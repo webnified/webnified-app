@@ -699,6 +699,9 @@ hr:after {
     width: 100%;
     padding: 20px;
   }
+  .navbar-nav {
+    margin: 0;
+  }
 }
 
 
@@ -707,9 +710,7 @@ hr:after {
   .navbar-nav .smintlink {
     text-align: center;
   }
-  .navbar-nav {
-    margin: 0;
-  }
+
 }
 
 /* max: 1199px Mobile Breakpoint */
