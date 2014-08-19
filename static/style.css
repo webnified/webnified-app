@@ -17,6 +17,11 @@ body {
   
 }
 
+/* Modal */
+.modal-header {
+  border: 0;
+}
+
 /* Navbar */
 .navbar {
   margin-bottom: 0;
@@ -366,6 +371,32 @@ body {
     color: #333;
 }
 
+/* Project Modal */
+.project-modal img {
+  width: 100%;
+}
+.project-modal .modal-body {
+    padding: 45px;
+}
+.project-modal .project-name {
+    margin-top: 40px;
+    font-size: 30px;
+    margin-bottom: 0;
+}
+.project-modal .project-desc {
+    margin: 20px 0 30px;
+}
+.project-modal .project-desc p {
+    margin-bottom: 30px;
+}
+.project-modal .project-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 10px 0 10px;
+}
+.project-modal .project-url {
+    font-size: 1em;
+}
 /* Slider */
 #project-slider .item img {
     display: block;
@@ -426,6 +457,32 @@ body {
 .hero.dimful .profile {
   left: 20%;
   top: -70px;
+}
+
+/* Profile Modal */
+.profile-modal .modal-body {
+    padding: 30px 30px 45px;
+}
+.profile-modal .profile-desc .awesome-desc {
+    text-align: left;
+    margin: 25px 0 0;
+}
+.profile-modal .profile-desc .awesome-desc p {
+    margin-bottom: 30px;
+}
+.profile-modal .profile-desc .position {
+    font-family: mikadobold;
+    font-size: 22px;
+    margin: 0 0 20px;
+}
+.profile-modal .profile-desc .name {
+    font-size: 30px;
+}
+.profile-modal .profile-desc .identity {
+    margin: 20px 0 10px;
+}
+.profile-modal .profile-desc .fb-link img {
+    width: 40px;
 }
 
 /* Team */
@@ -714,10 +771,39 @@ hr:after {
   .profile {
     display: block;
   }
+
+}
+
+/* min-width 767px Mobile Breakpoint */
+@media (min-width: 768px) {
+
+  .project-modal .modal-dialog {
+    width: 900px;
+  }
+
+  .profile-modal .modal-dialog {
+    width: 1000px;
+  }
+  .profile-modal .modal-body {
+    padding: 30px 50px 45px;
+  }
+  .profile-modal .profile-desc .name {
+    margin-bottom: 0;
+    display: inline;
+    margin-right: 15px;
+  }
+  .profile-modal .profile-desc .fb-link img {
+    width: 25px;
+    margin-bottom: 13px;
+  }
+  .profile-modal .profile-desc .fb-link {
+    display: inline;
+  }
 }
 
 /* max: 1199px Mobile Breakpoint */
 @media (max-width: 1199px) {
+
   .team .heroes {
     text-align: center;
   }
