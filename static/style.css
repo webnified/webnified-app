@@ -376,32 +376,40 @@ body {
   width: 100%;
 }
 .project-modal .modal-body {
-    padding: 45px;
+  padding: 45px;
 }
 .project-modal .project-name {
-    margin-top: 40px;
-    font-size: 30px;
-    margin-bottom: 0;
+  margin-top: 40px;
+  font-size: 30px;
+  margin-bottom: 0;
 }
 .project-modal .project-desc {
-    margin: 20px 0 30px;
+  margin: 20px 0 30px;
 }
 .project-modal .project-desc p {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 .project-modal .project-title {
-    font-size: 22px;
-    font-weight: bold;
-    margin: 10px 0 10px;
+  font-size: 22px;
+  font-weight: bold;
+  margin: 10px 0 10px;
 }
 .project-modal .project-url {
-    font-size: 1em;
+  font-size: 1em;
 }
 /* Slider */
 #project-slider .item img {
-    display: block;
-    width: 100%;
-    height: auto;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.owl-wrapper-outer {
+  border-radius: 10px;
+}
+#project-slider .item {
+  overflow: hidden;  
+  border-radius: 10px;
+  margin-top: 40px;
 }
 
 /* Profile */
