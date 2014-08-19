@@ -815,7 +815,6 @@ hr:after {
 
 /* max: 1199px Mobile Breakpoint */
 @media (max-width: 1199px) {
-
   .team .heroes {
     text-align: center;
   }
@@ -834,5 +833,15 @@ hr:after {
     width: 250px;
     text-align: center;
   } 
+
 }
 
+@media (min-width: 1200px) {
+  .hero:hover {
+    -webkit-filter: drop-shadow(0 0 10px skyblue);
+    filter: url(#drop-shadow);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=0, Color='#7ec0ee')";
+    filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=0, Color='#7ec0ee')";
+    z-index: 4;
+  }  
+}
