@@ -485,6 +485,18 @@ body {
     width: 40px;
 }
 
+.profile-modal .profile-recognitions {
+    font-size: 0.8em;
+    line-height: 1.6em;
+}
+.profile-modal .profile-recognitions .list .items {
+    margin-bottom: 10px;
+}
+.profile-modal .profile-recognitions .list {
+    padding-top: 55px;
+    padding-left: 0;
+}
+
 /* Team */
 .team {
   padding: 100px 0;
