@@ -1,13 +1,24 @@
 var currentButton = "";
+var navBarOffset = $(".navbar").offset().top;
+var currentPosition = $(window).scrollTop();
 
-$(".navbar").waypoint(function (direction){	
-	if(direction == "down"){
-		$(this).addClass("navbar-fixed-top");
+/*$(".navbar").waypoint(function (direction){			
+	if(bool){
+		if(direction == "down"){
+			$(this).addClass("navbar-fixed-top");
+		}
+		if(direction == "up"){
+			$(this).removeClass("navbar-fixed-top");
+		}
+	}else{					
+		offset();
+	}	
+	if(!bool){
+		offset();
 	}
-	if(direction == "up"){
-		$(this).removeClass("navbar-fixed-top");
-	}
-}, { offset: 20 });
+}, { offset: 20 });*/
+
+
 /*what we do Waypoint*/
 waypoints("#what-we-do" , "#s1");
 /*pocess Waypoint*/
@@ -18,6 +29,26 @@ waypoints("#projects" , "#s3");
 waypoints("#team" , "#s4");
 /*contact Waypoint*/
 waypoints("#contact" , "#s5");
+
+if(currentPosition > 50){
+	offset();
+}
+
+function offset(){	
+	var currentPosition = $(window).scrollTop();
+	setOffset = navBarOffset;
+	if(currentPosition >= navBarOffset){
+		$(".navbar").addClass("navbar-fixed-top");
+	}
+}
+
+$(window).scroll(function (){
+	if(($(window).scrollTop() + 20) <= navBarOffset)		
+		$(".navbar").removeClass("navbar-fixed-top");
+	else
+		$(".navbar").addClass("navbar-fixed-top");
+	// console.log($(window).scrollTop());
+});
 
 $(".smintlink ").click(function ( event ){
 	event.preventDefault();
