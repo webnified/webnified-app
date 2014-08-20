@@ -573,12 +573,21 @@ body {
   text-align: right;
 }
 .contact-form .btn {
-  margin-right: 0;
+  margin-right: 15px;
   margin-left: 0;
   background-color: #30B4EB;
 }
 .contact-form > .col-lg-6 {
   padding: 0;
+}
+.contact-details .location {
+    width: 100%;
+}
+.contact-details {
+    text-align: center;
+}
+.contact-details .fb-logo {
+    width: 30px;
 }
 
 /* Typography */
@@ -665,7 +674,6 @@ hr {
   border-radius: 10px;
   margin: 20px 20px;
 }
-
 hr:after {
   display: inline-block;  width: 50px;  height: 50px;  
   background: #eee url('img/rocket-ships-separator.png') no-repeat 51% 44%;  
@@ -677,6 +685,22 @@ hr:after {
   transform: rotate(30deg);
   border-radius: 50%;
 }
+.hidden-lg.row {
+  margin-top: 160px;
+}
+
+.vertical-hr {
+    border: 4px solid #eee;  
+    width: 0;  
+    height: 545px;  
+    position: absolute;  
+    left: 685px;  margin: 0;
+}
+.vertical-hr:after {
+    left: -22px;
+    top: 45%
+}
+
 
 /* 480px Mobile Breakpoint */
 @media (max-width: 480px) {
@@ -776,6 +800,7 @@ hr:after {
   .contact-form .btn {
     width: 100%;
     padding: 20px;
+    margin-right: 0;
   }
   .navbar-nav {
     margin: 0;
@@ -791,6 +816,7 @@ hr:after {
   .profile {
     display: block;
   }
+
 
 }
 
@@ -841,6 +867,10 @@ hr:after {
     width: 250px;
     text-align: center;
   } 
+
+  .contact-details {
+    margin-top: 100px;
+  }
 
 }
 
