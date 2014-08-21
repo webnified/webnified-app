@@ -60,7 +60,7 @@ body {
   background-color: #081F35;
   background-image: url(img/starfield.png);
   color: white;
-  padding: 100px 0 250px;
+  padding: 0 0 250px;
   margin-bottom: 0;
   overflow: hidden;
 }
@@ -524,9 +524,12 @@ body {
 .team .hero img {
   width: 100%;
 }
-.team .heroes .hero.kevin, 
-.team .heroes .hero.raven {
+.team .heroes .hero.kevin,
+.team .heroes .hero.papot {
   z-index: 3;
+}
+.team .heroes .hero.raven {
+  z-index: 4;
 }
 .team .hero.papot .profile {
   left: 23%;  
