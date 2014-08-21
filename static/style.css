@@ -56,6 +56,17 @@ body {
 }
 
 /* Lead */
+.moon {
+    position: absolute;
+    top: 80px;
+    right: 25px;
+}
+
+.station {
+    position: absolute;
+    top: 80px;
+    left: 25px;
+}
 .lead {
   background-color: #081F35;
   background-image: url(img/starfield.png);
