@@ -348,6 +348,35 @@ body {
   width: 250px;
 } 
 
+/* Tools */
+.tools {
+  text-align: center;
+  padding-bottom: 100px;
+  -webkit-filter: grayscale(1);
+}
+.tools img {
+  width: 100px;
+  margin: 20px 40px;
+}
+.tools .css3 {
+  width: 40px;
+}
+.tools .angularjs {
+  width: 50px;
+}
+.tools .html5 {
+  width: 60px;
+}
+.tools .ruby {
+  width: 50px;
+}
+.tools .ror {
+  width: 40px;
+}
+.tools .lego {
+  width: 70px;
+}
+
 /* Process */
 .our-process {
   padding: 100px 0;
