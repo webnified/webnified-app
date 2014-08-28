@@ -14,7 +14,6 @@ body {
   margin-left: 10px;
   margin-right: 10px;
   padding: 10px 50px;
-  
 }
 
 /* Modal */
@@ -92,12 +91,14 @@ body {
   font-family: 'Mikado Light';
 }
 .lead .call-to-action {
-  padding-top: 50px;
+  padding-top: 10px;
   text-align: center;
 }
 .lead .btn {
   color: #111111;
+  box-shadow: 2px 5px #333;
 }
+
 .lead .btn.business {
   background-color: #C9D158;
 }
@@ -347,7 +348,6 @@ body {
 .what-we-do img {
   width: 250px;
 } 
-
 /* Tools */
 .tools {
   text-align: center;
@@ -383,7 +383,7 @@ body {
   background-color: white;
 }
 .our-process .content {
-    margin: 100px;
+    margin: 50px 100px;
 }
 .process-img {
     width: 100%;
@@ -395,7 +395,7 @@ body {
     margin-bottom: 20px;
 }
 .process {
-    padding: 50px 0;
+    padding: 10px 0;
 }
 
 @media (max-width: 991px) {
@@ -523,7 +523,7 @@ body {
     margin-bottom: 30px;
 }
 .profile-modal .profile-desc .position {
-    font-family: mikadobold;
+    font-family: 'mikado bold';
     font-size: 22px;
     margin: 0 0 20px;
 }
@@ -746,6 +746,10 @@ hr:after {
 .vertical-hr:after {
     left: -22px;
     top: 45%
+}
+
+.message-sent {
+  display: none;
 }
 
 
